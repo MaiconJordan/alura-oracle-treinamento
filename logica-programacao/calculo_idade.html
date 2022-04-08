@@ -1,6 +1,16 @@
 <script>
-    ano = 2022
-    pulaLinha = "<br>"
-    document.write("Maicon tem " + (ano - 1993) + " anos" + pulaLinha);
-    document.write("Sabrine tem " + (ano - 1996) + " anos" + pulaLinha);
+    function pulaLinha(){
+        document.write("<br>")
+    }  
+    
+    function mostra (msg){
+        document.write(msg)
+    }
+
+    ano = 2022    
+    mostra("Maicon tem " + (ano - 1993) + " anos"  );
+    pulaLinha()    
+    mostra("Sabrine tem " + (ano - 1996) + " anos" );  
+
+
 </script>
