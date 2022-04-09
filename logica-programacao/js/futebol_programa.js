@@ -1,5 +1,3 @@
-
-<script>
 function pulaLinha(){
     document.write("<br>")
 }  
@@ -35,6 +33,3 @@ if(pontos < 28 ){
 if(pontos == 28 ){
     mostra("Seu time está igual do que ano passado");
 } 
-
-
-</script>
