@@ -14,4 +14,12 @@ var limite = parseInt(prompt("Digite até que ano você quer a copa?"))
 for(anoCopa = anoCopa ; anoCopa <= limite ; anoCopa += 4){
     mostra(anoCopa);
     pulaLinha();
-}
+} 
+
+
+
+
+
+
+
+
