@@ -9,5 +9,6 @@ function desenhaQuadrado(x, y, cor){
 
 }
 
-desenhaQuadrado(0, 0, 'green')
-desenhaQuadrado(50, 0, 'red')
+for(x = 0 ; x < 600 ; x += 50 ){
+    desenhaQuadrado(x, 0 , 'green')
+}
