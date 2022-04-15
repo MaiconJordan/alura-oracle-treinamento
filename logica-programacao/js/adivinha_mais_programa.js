@@ -1,23 +1,29 @@
+var segredos = [5,7,10,2,3];
 
-var sorteado = Math.round(Math.random() * 5)
-
-var input = document.querySelector("input")
-
-function verifica(){
-    if(input.value == sorteado){
-
-        document.write("VOCÊ ACERTOU")
-    } else {
-        alert("VOCÊ ERROU!!!!!")
-    }
-
-    input.value = "";
+var input = document.querySelector("input");
     input.focus();
-    
+
+function verifica() {
+
+for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+    if(input.value == segredos[posicao]) {
+
+        alert("Você ACERTOU!");
+        
+        break;
+    }
 }
 
+if(input.value != segredos[posicao]) {
+    alert("Você ERROU!");
+}
 
-var butao = document.querySelector("button")
+input.value = "";
+input.focus();
 
-butao.onclick = verifica
+}
 
+var button = document.querySelector("button");
+
+button.onclick = verifica;
