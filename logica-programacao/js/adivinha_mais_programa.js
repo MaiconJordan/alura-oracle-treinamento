@@ -6,10 +6,13 @@ var input = document.querySelector("input")
 function verifica(){
     if(input.value == sorteado){
 
-        alert("VOCÊ ACERTOU")
+        document.write("VOCÊ ACERTOU")
     } else {
         alert("VOCÊ ERROU!!!!!")
     }
+
+    input.value = "";
+    input.focus();
     
 }
 
