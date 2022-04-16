@@ -1,34 +1,37 @@
-var tela = document.querySelector('canvas')
-var pincel = tela.getContext('2d')
 
-pincel.fillStyle = 'gray'
-pincel.fillRect(0, 0 ,600, 400);
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
 
-var cores = ['blue','red','green']
-var indiceCorAtual = 0 // começa com blue
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
 
-function desenhaCirculo (evento){
-    
-    var x = evento.pageX - tela.offsetLeft;
-    var y = evento.pageY - tela.offsetTop;
-    
-    pincel.fillStyle = cores[indiceCorAtual]
-    pincel.beginPath()
-    pincel.arc(x, y, 10, 0, 2 * 3.14)
-    pincel.fill()
+    var raio = 10;
 
-}
+    function desenhaCirculo(x, y, raio, cor) {
 
-tela.onclick = desenhaCirculo
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    desenhaCirculo(300,200, raio + 20, 'red');
+    desenhaCirculo(300,200, raio + 10, 'white');
+    desenhaCirculo(300,200, raio, 'red');
+
+    function dispara(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
 
 
-function mudaCor() {
+        if (x > 300 - raio 
+            && x < 300 + raio
+                && y > 200 - raio 
+                    && y < 200 + raio) {
 
-    indiceCorAtual++
-    if(indiceCorAtual >= cores.length){
-        indiceCorAtual = 0
-    }    
-    return false;
-}
+            alert('Acertou');
+        }
+    }
 
-tela.oncontextmenu = mudaCor;
+    tela.onclick = dispara;
