@@ -71,3 +71,5 @@ function sorteia() {
  var button = document.querySelector("button");
 
  button.onclick = verifica;
+
+ console.log(input)
