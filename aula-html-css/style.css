@@ -7,14 +7,13 @@ form {
 	margin: 40px 0 0 ;
 }
 
-form label {
+form label, form legend  {
 	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
 }
 
-form input {
-	display: block;
-	margin: 0 0 20px;
-}
+
 
 header {
 	background: #BBBBBB;
@@ -172,4 +171,31 @@ th  {
 td, th {
 	border: 1px solid #000000;
 	padding: 5px 20px;
+}
+
+
+.input-padrao {
+	display: block;
+	margin:  0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+select {
+	margin: 0 0 20px 0 ;
+}
+
+#botao-enviar {
+	border: none;
+	background: rgb(0, 140, 255);
+	color: whitesmoke;
+	font-size: 15px;
+	font-weight: bold;
+	transition: 0.5s background;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+#botao-enviar:hover {
+	background-color: rgb(8, 72, 156);
 }
