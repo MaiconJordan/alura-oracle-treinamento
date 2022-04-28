@@ -297,6 +297,7 @@ thead {
 
 .imagem-beneficios {
 	width: 60%;	
+	box-shadow: 10px 10px 30px #000000;
 }
 
 .mapa {
